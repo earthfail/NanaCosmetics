@@ -17,7 +17,7 @@ public partial class signin : System.Web.UI.Page
         UserClass user1 = new UserClass();
         if (user1.UserExist(this.userEmailBox.Text, this.passwordBox.Text))
         {
-            Session["Type"] = "User";
+            Session["type"] = "User";
             Session["user"] = user1.UserDetails(this.userEmailBox.Text);
             Session["bday"] = user1.UserBday(this.userEmailBox.Text);
             Session["email"] = this.userEmailBox.Text;

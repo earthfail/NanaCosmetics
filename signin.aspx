@@ -13,6 +13,10 @@
             border-width: 1px;
             text-transform:capitalize;
         }
+        #singuplink, #singuplink:hover, #singuplink:visited {
+            text-decoration: none;
+            color: inherit;
+        }
         .auto-style2 {
             text-align: center;
         }
@@ -40,20 +44,24 @@
                 <td>
                     <asp:TextBox ID="passwordBox" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td>
+        <asp:Label ID="Label3" runat="server" Text="email or password incorrect" Visible="False"></asp:Label>
+                </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style2" colspan="2">
                     <asp:Button ID="Button2" runat="server" Text="log in" OnClick="Button2_Click" />
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:Label ID="Label4" runat="server" Text="Don't have an account? "></asp:Label>
+                    <asp:HyperLink ID="singuplink" runat="server" NavigateUrl="~/signup.aspx">Click Here</asp:HyperLink>
+                </td>
                 <td>&nbsp;</td>
             </tr>
         </table>
     
     </div>
-        <asp:Label ID="Label3" runat="server" Text="email or password incorrect" Visible="False"></asp:Label>
     </form>
 </body>
 </html>

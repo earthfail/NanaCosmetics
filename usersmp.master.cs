@@ -9,7 +9,10 @@ public partial class usersmp : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        //checks if he is a user
+        if (Session["type"] == null || Session["type"].ToString()!="User")
+            Response.Redirect("signin.aspx");
+        //print a good greating based on the time 
             uname.Text = (string)Session["user"];
             if (DateTime.Now.Hour < 12 && DateTime.Now.Hour > 5)
                 sentence.Text = "good morning ";

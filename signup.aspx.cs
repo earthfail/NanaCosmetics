@@ -45,7 +45,7 @@ public partial class signup : System.Web.UI.Page
             user1.BirthDate = DateTime.Parse(birthday.Text);
             if (user1.InsertNewUser())
             {
-                Session["Type"] = "User";
+                Session["type"] = "User";
                 Session["user"] = user1.UserFirstName;
                 Session["bday"] = user1.BirthDate;
                 Session["email"] = user1.Email;
